@@ -94,7 +94,7 @@ export default function Stack({ lang }: StackProps) {
       <div className="container">
         <span className="caption block mb-4">{t(lang as any, "stack.label")}</span>
         <h2 className="h2 text-text mb-2 max-w-[480px]">{t(lang as any, "stack.title")}</h2>
-        <p className="text-[0.9375rem] text-text-secondary mb-12 max-w-[560px]">{t(lang as any, "stack.subtitle")}</p>
+        <p className="text-body-sm text-text-secondary mb-12 max-w-[560px]">{t(lang as any, "stack.subtitle")}</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-[900px] mx-auto">
           {shelves.map((shelf) => (
@@ -117,7 +117,7 @@ export default function Stack({ lang }: StackProps) {
                   const isSenior = tech.years >= 6;
                   return (
                     <li key={tech.name} className="grid grid-cols-[1fr_60px_auto] md:grid-cols-[1fr_80px_auto] gap-3 items-center py-2" role="listitem">
-                      <span className="text-[0.9375rem] font-medium text-text truncate">{tech.name}</span>
+                      <span className="text-body-sm font-medium text-text truncate">{tech.name}</span>
                       <div className="flex items-center">
                         <div className="w-full h-[3px] bg-border rounded-full overflow-hidden">
                           <div
@@ -130,7 +130,7 @@ export default function Stack({ lang }: StackProps) {
                           />
                         </div>
                       </div>
-                      <span className={`font-mono text-[0.8125rem] text-right min-w-[32px] ${isSenior ? "text-magic font-medium" : "text-text-muted"}`}>
+                      <span className={`font-mono text-label text-right min-w-[32px] ${isSenior ? "text-magic font-medium" : "text-text-muted"}`}>
                         {tech.years}{lang === "en" ? "y" : "a"}
                       </span>
                     </li>
@@ -142,7 +142,7 @@ export default function Stack({ lang }: StackProps) {
         </div>
 
         <div className="mt-12 max-w-[640px] p-6 bg-surface border border-border rounded-lg border-l-2 border-l-magic">
-          <p className="text-[0.9375rem] leading-relaxed text-text-secondary">
+          <p className="text-body-sm leading-relaxed text-text-secondary">
             {lang === "en"
               ? "Every technology listed above has been used in production. No \"played with it once\" entries. No tutorial projects. Only tools that have shipped real software to real users."
               : 'Cada tecnología listada arriba ha sido usada en producción. No hay entradas de "lo probé una vez". No hay proyectos de tutorial. Solo herramientas que han desplegado software real a usuarios reales.'}

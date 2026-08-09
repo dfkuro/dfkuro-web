@@ -235,7 +235,7 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     "hero.headlineAccent": "production software.",
     "hero.subtitle": "I do not write code that lives in slides.",
     "hero.subtitleLine2":
-      "I write code that lives in servers, trucks, and oil rigs.",
+      "I write code that lives in servers to help people and business.",
     "hero.meta": "Senior Full-Stack Software Engineer",
     "about.label": "About my",
     "about.bio":
@@ -555,7 +555,7 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     "hero.headlineAccent": "software en producción.",
     "hero.subtitle": "No escribo código para presentaciones.",
     "hero.subtitleLine2":
-      "Escribo código que vive en servidores, camiones y plataformas petroleras.",
+      "Escribo código que vive en servidores para ayudar a las personas y negocios.",
     "hero.meta": "Ingeniero Senior Full-Stack",
     "about.label": "Sobre mi",
     "about.bio":

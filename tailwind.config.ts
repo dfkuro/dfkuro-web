@@ -33,6 +33,13 @@ const config: Config = {
         sans: ["Inter", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
         mono: ["JetBrains Mono", "Fira Code", "SF Mono", "monospace"],
       },
+      fontSize: {
+        micro: "0.625rem",
+        overline: "0.6875rem",
+        label: "0.8125rem",
+        "body-sm": "0.9375rem",
+        lead: "1.0625rem",
+      },
       spacing: {
         "1": "0.25rem",
         "2": "0.5rem",

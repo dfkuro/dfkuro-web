@@ -31,7 +31,7 @@ export default function Footer({ lang }: FooterProps) {
       </div>
 
       <span
-        className="footer-vim-hint absolute bottom-2 left-4 font-mono text-[0.625rem] text-border-hover cursor-pointer select-none opacity-40 transition-all duration-fast hover:opacity-100 hover:text-magic"
+        className="footer-vim-hint absolute bottom-2 left-4 font-mono text-micro text-border-hover cursor-pointer select-none opacity-40 transition-all duration-fast hover:opacity-100 hover:text-magic"
         aria-hidden="true"
       >
         :set nu

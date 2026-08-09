@@ -40,7 +40,7 @@ export default function About({ lang }: AboutProps) {
                     />
                   </>
                 ) : (
-                  <span className="font-mono text-[0.625rem] text-text-muted animate-pulse">
+                  <span className="font-mono text-micro text-text-muted animate-pulse">
                     rendering avatar...
                   </span>
                 )}
@@ -53,7 +53,7 @@ export default function About({ lang }: AboutProps) {
                   <dt className="font-mono text-xs uppercase tracking-wider text-text-muted min-w-[80px] shrink-0">
                     {lang === "en" ? "Name" : "Nombre"}
                   </dt>
-                  <dd className="text-[0.9375rem] font-medium text-text">
+                  <dd className="text-body-sm font-medium text-text">
                     {profile.name}
                   </dd>
                 </div>
@@ -61,7 +61,7 @@ export default function About({ lang }: AboutProps) {
                   <dt className="font-mono text-xs uppercase tracking-wider text-text-muted min-w-[80px] shrink-0">
                     {lang === "en" ? "Role" : "Rol"}
                   </dt>
-                  <dd className="text-[0.9375rem] font-medium text-text">
+                  <dd className="text-body-sm font-medium text-text">
                     {profile.role}
                   </dd>
                 </div>
@@ -69,7 +69,7 @@ export default function About({ lang }: AboutProps) {
                   <dt className="font-mono text-xs uppercase tracking-wider text-text-muted min-w-[80px] shrink-0">
                     {lang === "en" ? "Location" : "Ubicación"}
                   </dt>
-                  <dd className="text-[0.9375rem] font-medium text-text">
+                  <dd className="text-body-sm font-medium text-text">
                     {profile.location}
                   </dd>
                 </div>
@@ -77,8 +77,8 @@ export default function About({ lang }: AboutProps) {
                   <dt className="font-mono text-xs uppercase tracking-wider text-text-muted min-w-[80px] shrink-0">
                     {lang === "en" ? "Status" : "Estado"}
                   </dt>
-                  <dd className="text-[0.9375rem] font-medium text-text">
-                    <Badge variant="magic" className="text-[0.6875rem]">
+                  <dd className="text-body-sm font-medium text-text">
+                    <Badge variant="magic" className="text-overline">
                       <span
                         className="w-1.5 h-1.5 rounded-full bg-magic animate-pulse-dot shadow-glow-sm"
                         aria-hidden="true"
@@ -91,7 +91,7 @@ export default function About({ lang }: AboutProps) {
                   <dt className="font-mono text-xs uppercase tracking-wider text-text-muted min-w-[80px] shrink-0">
                     {lang === "en" ? "Uptime" : "Actividad"}
                   </dt>
-                  <dd className="text-[0.9375rem] font-medium text-text">
+                  <dd className="text-body-sm font-medium text-text">
                     {profile.uptime}
                   </dd>
                 </div>
@@ -99,7 +99,7 @@ export default function About({ lang }: AboutProps) {
                   <dt className="font-mono text-xs uppercase tracking-wider text-text-muted min-w-[80px] shrink-0">
                     Shell
                   </dt>
-                  <dd className="text-[0.9375rem] font-medium text-text">
+                  <dd className="text-body-sm font-medium text-text">
                     {profile.shell}
                   </dd>
                 </div>
@@ -107,7 +107,7 @@ export default function About({ lang }: AboutProps) {
                   <dt className="font-mono text-xs uppercase tracking-wider text-text-muted min-w-[80px] shrink-0">
                     Editor
                   </dt>
-                  <dd className="text-[0.9375rem] font-medium text-text">
+                  <dd className="text-body-sm font-medium text-text">
                     {profile.editor}
                   </dd>
                 </div>
@@ -115,7 +115,7 @@ export default function About({ lang }: AboutProps) {
                   <dt className="font-mono text-xs uppercase tracking-wider text-text-muted min-w-[80px] shrink-0">
                     OS
                   </dt>
-                  <dd className="text-[0.9375rem] font-medium text-text">
+                  <dd className="text-body-sm font-medium text-text">
                     Debian / Ubuntu
                   </dd>
                 </div>
@@ -132,14 +132,14 @@ export default function About({ lang }: AboutProps) {
               }}
               aria-hidden="true"
             />
-            <span className="absolute bottom-[calc(100%+6px)] left-1/2 -translate-x-1/2 translate-y-1 px-3 py-2 bg-accent text-background font-mono text-[0.6875rem] rounded-sm whitespace-nowrap opacity-0 pointer-events-none transition-all duration-fast group-hover:opacity-100 group-hover:translate-y-0">
+            <span className="absolute bottom-[calc(100%+6px)] left-1/2 -translate-x-1/2 translate-y-1 px-3 py-2 bg-accent text-background font-mono text-overline rounded-sm whitespace-nowrap opacity-0 pointer-events-none transition-all duration-fast group-hover:opacity-100 group-hover:translate-y-0">
               S/N: 1337-DEVELOPER
             </span>
           </div>
         </Card>
 
-        <div className="max-w-[600px] mb-12">
-          <p className="text-[1.0625rem] leading-relaxed text-text-secondary">
+        <div className="max-w-auto mb-12">
+          <p className="text-xl leading-relaxed text-text-secondary">
             {t(lang as any, "about.bio")}
           </p>
         </div>
@@ -148,7 +148,7 @@ export default function About({ lang }: AboutProps) {
           <span className="caption block mb-3">
             {t(lang as any, "about.education.label")}
           </span>
-          <p className="text-[0.9375rem] text-text-secondary leading-relaxed">
+          <p className="text-body-sm text-text-secondary leading-relaxed">
             {t(lang as any, "about.education.school")}
           </p>
         </div> */}

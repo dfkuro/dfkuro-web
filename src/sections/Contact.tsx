@@ -35,7 +35,7 @@ export default function Contact({ lang }: ContactProps) {
 
         <div className="max-w-narrow">
           <h2 className="display-secondary text-text mb-6">{t(lang as any, "contact.title")}</h2>
-          <p className="text-[1.0625rem] leading-relaxed text-text-secondary mb-12 max-w-[560px]">
+          <p className="text-lead leading-relaxed text-text-secondary mb-12 max-w-[560px]">
             {t(lang as any, "contact.body")}
           </p>
 
@@ -48,7 +48,7 @@ export default function Contact({ lang }: ContactProps) {
               {t(lang as any, "contact.cta")}
             </a>
             <button
-              className="inline-flex items-center gap-2 px-4 py-2 border border-border rounded-sm bg-surface text-text-secondary text-[0.8125rem] font-medium cursor-pointer transition-all duration-fast ease-out-quart hover:border-magic hover:text-magic hover:shadow-glow-sm magnetic"
+              className="inline-flex items-center gap-2 px-4 py-2 border border-border rounded-sm bg-surface text-text-secondary text-label font-medium cursor-pointer transition-all duration-fast ease-out-quart hover:border-magic hover:text-magic hover:shadow-glow-sm magnetic"
               type="button"
               aria-label="Copy email to clipboard"
               onClick={handleCopy}

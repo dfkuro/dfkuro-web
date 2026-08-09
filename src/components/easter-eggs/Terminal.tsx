@@ -167,7 +167,7 @@ export default function Terminal({ lang }: TerminalProps) {
         </button>
       </div>
 
-      <div ref={bodyRef} className="flex-1 p-4 overflow-y-auto font-mono text-[0.8125rem] leading-relaxed text-[#E4E4E7]" role="log" aria-live="polite" aria-atomic="false">
+      <div ref={bodyRef} className="flex-1 p-4 overflow-y-auto font-mono text-label leading-relaxed text-[#E4E4E7]" role="log" aria-live="polite" aria-atomic="false">
         {lines.map((line, i) => (
           <div key={i} className="mb-2 whitespace-pre-wrap break-words" dangerouslySetInnerHTML={{ __html: line.html }} />
         ))}
@@ -180,7 +180,7 @@ export default function Terminal({ lang }: TerminalProps) {
         <input
           ref={inputRef}
           type="text"
-          className="flex-1 bg-transparent border-none outline-none font-mono text-[0.8125rem] text-[#FAFAFA] caret-magic ml-2"
+          className="flex-1 bg-transparent border-none outline-none font-mono text-label text-[#FAFAFA] caret-magic ml-2"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           onKeyDown={handleKeyDown}
