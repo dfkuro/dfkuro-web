@@ -96,7 +96,7 @@ export default function Stack({ lang }: StackProps) {
         <h2 className="h2 text-text mb-2 max-w-[480px]">{t(lang as any, "stack.title")}</h2>
         <p className="text-[0.9375rem] text-text-secondary mb-12 max-w-[560px]">{t(lang as any, "stack.subtitle")}</p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-[900px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-[900px] mx-auto">
           {shelves.map((shelf) => (
             <div
               key={shelf.key}

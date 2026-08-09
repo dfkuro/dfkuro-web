@@ -37,9 +37,6 @@ type TranslationKey =
   | "experience.achievements.12years.value"
   | "experience.achievements.12years.label"
   | "experience.achievements.12years.context"
-  | "experience.achievements.rating.value"
-  | "experience.achievements.rating.label"
-  | "experience.achievements.rating.context"
   | "experience.achievements.users.value"
   | "experience.achievements.users.label"
   | "experience.achievements.users.context"
@@ -84,9 +81,17 @@ type TranslationKey =
   | "experience.chapter.cotemar.problem"
   | "experience.chapter.cotemar.solution"
   | "experience.chapter.cotemar.impact"
-  | "experience.chapter.cotemar.tech"
-  | "experience.chapter.cotemar.result"
-  | "stack.label"
+   | "experience.chapter.cotemar.tech"
+   | "experience.chapter.cotemar.result"
+   | "experience.apps.label"
+   | "experience.apps.title"
+   | "experience.apps.subtitle"
+   | "experience.apps.mecanix.description"
+   | "experience.apps.saeko.description"
+   | "experience.apps.mindone.description"
+   | "experience.apps.cotemar.description"
+   | "experience.apps.playStore"
+   | "stack.label"
   | "stack.title"
   | "stack.subtitle"
   | "stack.domains.frontend.name"
@@ -232,7 +237,7 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     "hero.subtitleLine2":
       "I write code that lives in servers, trucks, and oil rigs.",
     "hero.meta": "Senior Full-Stack Software Engineer",
-    "about.label": "Specifications",
+    "about.label": "About my",
     "about.bio":
       "I build software that survives production. Twelve years of taking ideas from concept to deployment — web, mobile, and backend. My work lives in logistics trucks, oil rigs, and app stores. I care about architecture that outlasts the sprint, APIs that do not break contracts, and code the next engineer can actually maintain.",
     "about.education.label": "Education",
@@ -243,10 +248,6 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     "experience.achievements.12years.label": "Years",
     "experience.achievements.12years.context":
       "Shipping production software across web, mobile, and backend.",
-    "experience.achievements.rating.value": "2.4→4.3★",
-    "experience.achievements.rating.label": "Rating",
-    "experience.achievements.rating.context":
-      "Turned a failing app into one users actually kept installed.",
     "experience.achievements.users.value": "500+",
     "experience.achievements.users.label": "Users",
     "experience.achievements.users.context":
@@ -317,8 +318,21 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
       "500+ workers accessed critical operational data daily. Inspections became digital. Errors dropped. Sync happened automatically when crews returned to port.",
     "experience.chapter.cotemar.tech":
       "React Native, Electron, Offline-First, Sync Engine, REST APIs",
-    "experience.chapter.cotemar.result":
-      "Operations continued without connectivity. Data integrity maintained.",
+     "experience.chapter.cotemar.result":
+       "Operations continued without connectivity. Data integrity maintained.",
+    "experience.apps.label": "Published apps",
+    "experience.apps.title": "Software people can install.",
+    "experience.apps.subtitle":
+      "A selection of production mobile apps I have contributed to, available on Google Play.",
+    "experience.apps.mecanix.description":
+      "Fleet maintenance and vehicle status tracking for Grupo Traxion.",
+    "experience.apps.saeko.description":
+      "Education community app for students, parents, teachers, and administrators.",
+    "experience.apps.mindone.description":
+      "Employee app with vehicles, announcements, activities, trips, and service appointments.",
+    "experience.apps.cotemar.description":
+      "Employee and supplier services, operational information, and offshore safety resources.",
+    "experience.apps.playStore": "View on Google Play",
     "stack.label": "Stack",
     "stack.title": "Production-proven stack.",
     "stack.subtitle":
@@ -543,7 +557,7 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     "hero.subtitleLine2":
       "Escribo código que vive en servidores, camiones y plataformas petroleras.",
     "hero.meta": "Ingeniero Senior Full-Stack",
-    "about.label": "Especificaciones",
+    "about.label": "Sobre mi",
     "about.bio":
       "Construyo software que sobrevive en producción. Doce años llevando ideas del concepto al despliegue — web, móvil y backend. Mi trabajo vive en camiones de logística, plataformas petroleras y app stores. Me importa la arquitectura que sobrevive al sprint, las APIs que no rompen contratos, y el código que el siguiente ingeniero puede mantener.",
     "about.education.label": "Educación",
@@ -554,10 +568,6 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     "experience.achievements.12years.label": "Años",
     "experience.achievements.12years.context":
       "Construyendo software en producción: web, móvil y backend.",
-    "experience.achievements.rating.value": "2.4→4.3★",
-    "experience.achievements.rating.label": "Rating",
-    "experience.achievements.rating.context":
-      "Convertí una app que fallaba en una que los usuarios mantenían instalada.",
     "experience.achievements.users.value": "500+",
     "experience.achievements.users.label": "Usuarios",
     "experience.achievements.users.context":
@@ -628,8 +638,21 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
       "Más de 500 trabajadores accedieron a datos operativos críticos diariamente. Las inspecciones se digitalizaron. Los errores bajaron. La sincronización ocurrió automáticamente cuando las tripulaciones regresaban a puerto.",
     "experience.chapter.cotemar.tech":
       "React Native, Electron, Offline-First, Motor de Sincronización, REST APIs",
-    "experience.chapter.cotemar.result":
-      "Las operaciones continuaron sin conectividad. La integridad de datos se mantuvo.",
+     "experience.chapter.cotemar.result":
+       "Las operaciones continuaron sin conectividad. La integridad de datos se mantuvo.",
+    "experience.apps.label": "Apps publicadas",
+    "experience.apps.title": "Software que la gente puede instalar.",
+    "experience.apps.subtitle":
+      "Una selección de aplicaciones móviles en producción en las que he participado, disponibles en Google Play.",
+    "experience.apps.mecanix.description":
+      "Mantenimiento de flota y seguimiento del estado de unidades para Grupo Traxion.",
+    "experience.apps.saeko.description":
+      "Aplicación educativa para estudiantes, padres, docentes y administradores.",
+    "experience.apps.mindone.description":
+      "App para colaboradores con vehículos, anuncios, actividades, viajes y citas de servicio.",
+    "experience.apps.cotemar.description":
+      "Servicios para colaboradores y proveedores, información operativa y recursos de seguridad offshore.",
+    "experience.apps.playStore": "Ver en Google Play",
     "stack.label": "Stack",
     "stack.title": "Stack probado en producción.",
     "stack.subtitle":
@@ -843,7 +866,8 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
 };
 
 export function t(locale: Locale, key: TranslationKey): string {
-  return translations[locale][key] || translations[defaultLocale][key] || key;
+  const localized = translations[locale as keyof typeof translations];
+  return localized?.[key] || translations[defaultLocale][key] || key;
 }
 
 export type { TranslationKey };

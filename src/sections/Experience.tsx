@@ -7,7 +7,6 @@ interface ExperienceProps {
 
 const achievements = [
   { key: "12years" },
-  { key: "rating" },
   { key: "users" },
   { key: "delivery" },
 ];
@@ -19,43 +18,71 @@ const chapters = [
   { id: "cotemar", hash: "d1a6c88" },
 ];
 
+const publishedApps = [
+  {
+    id: "mecanix",
+    name: "Mecanix-e",
+    publisher: "Grupo Traxion",
+    packageId: "mx.mecanixtrax",
+  },
+  {
+    id: "saeko",
+    name: "Saeko App",
+    publisher: "Saeko",
+    packageId: "com.kioru.app.saeko",
+  },
+  {
+    id: "mindone",
+    name: "Mi Copiloto",
+    publisher: "Grupo Traxion",
+    packageId: "com.mindone",
+  },
+  {
+    id: "cotemar",
+    name: "COTEMAR",
+    publisher: "COTEMAR SA DE CV",
+    packageId: "com.cotemar.cotemar",
+  },
+];
+
 export default function Experience({ lang }: ExperienceProps) {
   return (
     <section id="experience" className="py-24" aria-label="Experience">
       <div className="container">
-        <span className="caption block mb-10">
-          {t(lang as any, "experience.label")}
-        </span>
+        <div className="max-w-[900px] mx-auto">
+          <span className="caption block mb-10 text-center">
+            {t(lang as any, "experience.label")}
+          </span>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16 max-w-[720px]">
-          {achievements.map((a) => (
-            <div
-              key={a.key}
-              className="flex flex-col gap-1 p-5 px-4 bg-surface border border-border rounded-lg transition-all duration-normal ease-out-quart hover:border-magic hover:shadow-glow-sm"
-            >
-              <span className="font-mono text-xl sm:text-2xl font-medium text-text tracking-tight">
-                {t(
-                  lang as any,
-                  `experience.achievements.${a.key}.value` as any,
-                )}
-              </span>
-              <span className="font-mono text-xs uppercase tracking-wider text-text-muted">
-                {t(
-                  lang as any,
-                  `experience.achievements.${a.key}.label` as any,
-                )}
-              </span>
-              <span className="text-[0.8125rem] text-text-secondary leading-snug mt-1">
-                {t(
-                  lang as any,
-                  `experience.achievements.${a.key}.context` as any,
-                )}
-              </span>
-            </div>
-          ))}
-        </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-16 max-w-[900px] mx-auto">
+            {achievements.map((a) => (
+              <div
+                key={a.key}
+                className="flex flex-col gap-1 p-5 px-4 text-center bg-surface border border-border rounded-lg transition-all duration-normal ease-out-quart hover:border-magic hover:shadow-glow-sm"
+              >
+                <span className="font-mono text-xl sm:text-2xl font-medium text-text tracking-tight">
+                  {t(
+                    lang as any,
+                    `experience.achievements.${a.key}.value` as any,
+                  )}
+                </span>
+                <span className="font-mono text-xs uppercase tracking-wider text-text-muted">
+                  {t(
+                    lang as any,
+                    `experience.achievements.${a.key}.label` as any,
+                  )}
+                </span>
+                <span className="text-[0.8125rem] text-text-secondary leading-snug mt-1">
+                  {t(
+                    lang as any,
+                    `experience.achievements.${a.key}.context` as any,
+                  )}
+                </span>
+              </div>
+            ))}
+          </div>
 
-        <div className="flex flex-col gap-16 max-w-[900px]">
+          <div className="flex flex-col gap-16">
           {chapters.map((chapter) => (
             <article
               key={chapter.id}
@@ -81,17 +108,21 @@ export default function Experience({ lang }: ExperienceProps) {
                 <header className="mb-2">
                   <div className="flex items-center gap-3 mb-3">
                     <span className="font-mono text-[0.6875rem] uppercase tracking-wider text-magic font-medium">
-                      {t(
+                      {/*{t(
                         lang as any,
                         `experience.chapter.${chapter.id}.chapter` as any,
-                      )}
-                    </span>
-                    <span className="font-mono text-xs text-text-muted">
+                      )}*/}
                       {t(
                         lang as any,
                         `experience.chapter.${chapter.id}.date` as any,
                       )}
                     </span>
+                    {/*<span className="font-mono text-xs text-text-muted">
+                      {t(
+                        lang as any,
+                        `experience.chapter.${chapter.id}.date` as any,
+                      )}
+                    </span>*/}
                   </div>
                   <h3 className="text-2xl md:text-3xl font-medium tracking-tight leading-tight text-text mb-1">
                     {t(
@@ -182,6 +213,53 @@ export default function Experience({ lang }: ExperienceProps) {
               </div>
             </article>
           ))}
+          </div>
+        </div>
+
+        <div className="mt-24">
+          <span className="caption block mb-4">
+            {t(lang as any, "experience.apps.label")}
+          </span>
+          <h2 className="h2 text-text mb-2 max-w-[560px]">
+            {t(lang as any, "experience.apps.title")}
+          </h2>
+          <p className="text-[0.9375rem] text-text-secondary mb-8 max-w-[600px]">
+            {t(lang as any, "experience.apps.subtitle")}
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {publishedApps.map((app) => (
+              <article
+                key={app.id}
+                className="flex flex-col gap-4 p-5 bg-surface border border-border rounded-lg transition-all duration-normal ease-out-quart hover:border-magic hover:shadow-glow-sm"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <h3 className="text-lg font-medium tracking-tight text-text">
+                      {app.name}
+                    </h3>
+                    <p className="font-mono text-xs text-text-muted mt-1">
+                      {app.publisher}
+                    </p>
+                  </div>
+                  <span className="font-mono text-xs text-magic" aria-hidden="true">
+                    Android
+                  </span>
+                </div>
+                <p className="text-sm leading-relaxed text-text-secondary flex-1">
+                  {t(lang as any, `experience.apps.${app.id}.description` as any)}
+                </p>
+                <a
+                  href={`https://play.google.com/store/apps/details?id=${app.packageId}&hl=en`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="link-underline self-start text-sm font-medium text-text"
+                >
+                  {t(lang as any, "experience.apps.playStore")} <span aria-hidden="true">↗</span>
+                </a>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>

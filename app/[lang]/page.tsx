@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { siteConfig } from "@config/site";
-import { t, locales } from "@i18n";
+import { t, locales, type Locale } from "@i18n";
 import HomePage from "@components/HomePage";
 
 export async function generateStaticParams() {
@@ -13,9 +14,10 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
-  const title = t(lang as any, "site.title");
-  const description = t(lang as any, "site.description");
-  const locale = t(lang as any, "site.locale");
+  const localeCode = getLocale(lang);
+  const title = t(localeCode, "site.title");
+  const description = t(localeCode, "site.description");
+  const locale = t(localeCode, "site.locale");
 
   return {
     title,
@@ -33,7 +35,7 @@ export async function generateMetadata({
       description,
     },
     alternates: {
-      canonical: `${siteConfig.url}/${lang}/`,
+      canonical: `${siteConfig.url}/${localeCode}/`,
       languages: Object.fromEntries(
         locales.map((l) => [l, `${siteConfig.url}/${l}/`])
       ),
@@ -43,28 +45,33 @@ export async function generateMetadata({
 
 export default async function LangPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
+  const locale = getLocale(lang);
   return (
     <>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              name: siteConfig.name,
-              alternateName: siteConfig.alias,
-              jobTitle: "Senior Full-Stack Software Engineer",
-              url: siteConfig.url,
-              email: siteConfig.email,
-              sameAs: ["https://github.com/dfkuro"],
-            }),
-          }}
-        />
-      </head>
-      <HomePage lang={lang} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: siteConfig.name,
+            alternateName: siteConfig.alias,
+            jobTitle: "Senior Full-Stack Software Engineer",
+            url: siteConfig.url,
+            email: siteConfig.email,
+            sameAs: ["https://github.com/dfkuro"],
+          }),
+        }}
+      />
+      <HomePage lang={locale} />
     </>
   );
+}
+
+function getLocale(lang: string): Locale {
+  if (locales.includes(lang as Locale)) {
+    return lang as Locale;
+  }
+
+  notFound();
 }

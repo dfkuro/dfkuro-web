@@ -34,25 +34,21 @@ export const metadata: Metadata = {
 export default function RootPage() {
   return (
     <>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              name: siteConfig.name,
-              alternateName: siteConfig.alias,
-              jobTitle: "Senior Full-Stack Software Engineer",
-              url: siteConfig.url,
-              email: siteConfig.email,
-              sameAs: ["https://github.com/dfkuro"],
-            }),
-          }}
-        />
-      </head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: siteConfig.name,
+            alternateName: siteConfig.alias,
+            jobTitle: "Senior Full-Stack Software Engineer",
+            url: siteConfig.url,
+            email: siteConfig.email,
+            sameAs: ["https://github.com/dfkuro"],
+          }),
+        }}
+      />
       <HomePage lang={lang} />
     </>
   );
