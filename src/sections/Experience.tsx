@@ -24,30 +24,34 @@ const publishedApps = [
     name: "Mecanix-e",
     publisher: "Grupo Traxion",
     packageId: "mx.mecanixtrax",
+    iosClosed: true,
   },
   {
     id: "saeko",
     name: "Saeko App",
     publisher: "Saeko",
     packageId: "com.kioru.app.saeko",
+    appStoreUrl: "https://apps.apple.com/mx/app/saeko/id1477257337",
   },
   {
     id: "mindone",
     name: "Mi Copiloto",
     publisher: "Grupo Traxion",
     packageId: "com.mindone",
+    iosClosed: true,
   },
   {
     id: "cotemar",
     name: "COTEMAR",
     publisher: "COTEMAR SA DE CV",
     packageId: "com.cotemar.cotemar",
+    appStoreUrl: "https://apps.apple.com/mx/app/cotemar/id1378653080",
   },
 ];
 
 export default function Experience({ lang }: ExperienceProps) {
   return (
-    <section id="experience" className="py-24" aria-label="Experience">
+    <section id="experience" className="py-12" aria-label="Experience">
       <div className="container">
         <div className="max-w-[900px] mx-auto">
           <span className="caption block mb-10 text-center">
@@ -243,20 +247,36 @@ export default function Experience({ lang }: ExperienceProps) {
                     </p>
                   </div>
                   <span className="font-mono text-xs text-magic" aria-hidden="true">
-                    Android
+                    Android/iOS
                   </span>
                 </div>
                 <p className="text-sm leading-relaxed text-text-secondary flex-1">
                   {t(lang as any, `experience.apps.${app.id}.description` as any)}
                 </p>
-                <a
-                  href={`https://play.google.com/store/apps/details?id=${app.packageId}&hl=en`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="link-underline self-start text-sm font-medium text-text"
-                >
-                  {t(lang as any, "experience.apps.playStore")} <span aria-hidden="true">↗</span>
-                </a>
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                  <a
+                    href={`https://play.google.com/store/apps/details?id=${app.packageId}&hl=en`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="link-underline self-start text-sm font-medium text-text"
+                  >
+                    {t(lang as any, "experience.apps.playStore")} <span aria-hidden="true">↗</span>
+                  </a>
+                  {app.appStoreUrl ? (
+                    <a
+                      href={app.appStoreUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="link-underline self-start text-sm font-medium text-text"
+                    >
+                      {t(lang as any, "experience.apps.appStore")} <span aria-hidden="true">↗</span>
+                    </a>
+                  ) : app.iosClosed ? (
+                    <span className="text-xs text-text-muted">
+                      {t(lang as any, "experience.apps.iosClosed")}
+                    </span>
+                  ) : null}
+                </div>
               </article>
             ))}
           </div>

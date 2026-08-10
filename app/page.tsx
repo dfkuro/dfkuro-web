@@ -11,6 +11,10 @@ const locale = t(lang, "site.locale");
 export const metadata: Metadata = {
   title,
   description,
+  icons: {
+    icon: "/favicon.svg?v=3",
+    shortcut: "/favicon.svg?v=3",
+  },
   openGraph: {
     type: "website",
     url: siteConfig.url,

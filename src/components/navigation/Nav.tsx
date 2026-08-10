@@ -5,6 +5,7 @@ import { t } from "@i18n";
 import { siteConfig } from "@config/site";
 import LangSwitcher from "./LangSwitcher";
 import ThemeToggle from "@components/theme/ThemeToggle";
+import Icon from "@components/ui/Icon";
 
 interface NavProps {
   lang: string;
@@ -105,6 +106,28 @@ export default function Nav({ lang }: NavProps) {
         </ul>
 
         <div className="flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-1" role="group" aria-label="Social profiles">
+            <a
+              href={siteConfig.social.github}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+              title="GitHub"
+              className="inline-flex items-center justify-center w-8 h-8 rounded-sm text-text-secondary transition-all duration-fast ease-out-quart hover:text-magic hover:bg-magic-soft"
+            >
+              <Icon name="github" size={17} />
+            </a>
+            <a
+              href={siteConfig.social.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+              title="LinkedIn"
+              className="inline-flex items-center justify-center w-8 h-8 rounded-sm text-text-secondary transition-all duration-fast ease-out-quart hover:text-magic hover:bg-magic-soft"
+            >
+              <Icon name="linkedin" size={17} />
+            </a>
+          </div>
           <ThemeToggle />
           <LangSwitcher lang={lang} />
           <button

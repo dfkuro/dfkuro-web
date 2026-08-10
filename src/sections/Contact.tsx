@@ -56,6 +56,28 @@ export default function Contact({ lang }: ContactProps) {
               <Icon name="copy" size={18} className="shrink-0" />
               <span className="min-w-[44px] text-left">{copyLabel}</span>
             </button>
+            <nav className="flex items-center gap-2" aria-label="Social profiles">
+              <a
+                href={siteConfig.social.github}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub"
+                title="GitHub"
+                className="inline-flex items-center justify-center w-10 h-10 border border-border rounded-sm text-text-secondary transition-all duration-fast ease-out-quart hover:border-magic hover:text-magic hover:shadow-glow-sm"
+              >
+                <Icon name="github" size={20} />
+              </a>
+              <a
+                href={siteConfig.social.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+                title="LinkedIn"
+                className="inline-flex items-center justify-center w-10 h-10 border border-border rounded-sm text-text-secondary transition-all duration-fast ease-out-quart hover:border-magic hover:text-magic hover:shadow-glow-sm"
+              >
+                <Icon name="linkedin" size={20} />
+              </a>
+            </nav>
           </div>
 
           <div className="pt-8 border-t border-border max-w-[480px]">

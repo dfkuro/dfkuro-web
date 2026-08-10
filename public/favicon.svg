@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <title>Izmir Sanchez</title>
+  <rect width="32" height="32" rx="8" fill="#FAFAFA" />
+  <rect x="0.75" y="0.75" width="30.5" height="30.5" rx="7.25" fill="none" stroke="#E4E4E7" stroke-width="1.5" />
+  <text class="brand-mark" x="5" y="23" fill="#09090B" font-family="Arial, sans-serif" font-size="18" font-weight="700">D</text>
+  <rect x="19" y="21.5" width="6" height="2" rx="1" fill="#09090B" />
+  <circle cx="27.5" cy="22.5" r="1.75" fill="#D9047A" />
+  <style>
+    @media (prefers-color-scheme: dark) {
+      rect:first-child { fill: #18181B; }
+      rect:nth-child(2) { stroke: #3F3F46; }
+      .brand-mark, rect:nth-of-type(3) { fill: #FAFAFA; }
+      circle:last-of-type { fill: #F04BA0; }
+    }
+  </style>
+</svg>

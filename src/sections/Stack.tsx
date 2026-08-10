@@ -141,7 +141,7 @@ export default function Stack({ lang }: StackProps) {
           ))}
         </div>
 
-        <div className="mt-12 max-w-[640px] p-6 bg-surface border border-border rounded-lg border-l-2 border-l-magic">
+        <div className="mt-12 max-w-[900px] p-6 bg-surface border border-border rounded-lg border-l-2 border-l-magic mx-auto">
           <p className="text-body-sm leading-relaxed text-text-secondary">
             {lang === "en"
               ? "Every technology listed above has been used in production. No \"played with it once\" entries. No tutorial projects. Only tools that have shipped real software to real users."

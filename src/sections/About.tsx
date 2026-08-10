@@ -10,7 +10,7 @@ interface AboutProps {
 
 export default function About({ lang }: AboutProps) {
   return (
-    <section id="about" className="py-32 pb-24" aria-label="About">
+    <section id="about" className="py-32 pb-12" aria-label="About">
       <div className="container">
         <span className="caption block mb-6">
           {t(lang as any, "about.label")}
@@ -139,7 +139,13 @@ export default function About({ lang }: AboutProps) {
         </Card>
 
         <div className="max-w-auto mb-12">
-          <p className="text-xl leading-relaxed text-text-secondary">
+          <p className="text-xl leading-relaxed text-text-secondary whitespace-pre-line font-bold text-center">
+            {t(lang as any, "about.title")}
+          </p>
+        </div>
+
+        <div className="max-w-auto mb-12">
+          <p className="text-lead leading-relaxed text-text-secondary whitespace-pre-line">
             {t(lang as any, "about.bio")}
           </p>
         </div>

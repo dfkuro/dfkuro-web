@@ -30,6 +30,7 @@ type TranslationKey =
   | "hero.subtitleLine2"
   | "hero.meta"
   | "about.label"
+  | "about.title"
   | "about.bio"
   | "about.education.label"
   | "about.education.school"
@@ -91,6 +92,8 @@ type TranslationKey =
    | "experience.apps.mindone.description"
    | "experience.apps.cotemar.description"
    | "experience.apps.playStore"
+   | "experience.apps.appStore"
+   | "experience.apps.iosClosed"
    | "stack.label"
   | "stack.title"
   | "stack.subtitle"
@@ -238,12 +241,13 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
       "I write code that lives in servers to help people and business.",
     "hero.meta": "Senior Full-Stack Software Engineer",
     "about.label": "About my",
+    "about.title": "I build software that makes it to production",
     "about.bio":
-      "I build software that survives production. Twelve years of taking ideas from concept to deployment — web, mobile, and backend. My work lives in logistics trucks, oil rigs, and app stores. I care about architecture that outlasts the sprint, APIs that do not break contracts, and code the next engineer can actually maintain.",
+      "For more than 12 years, I've been turning ideas into real products — from mobile and web applications to APIs and backend systems.\nMy work has shipped to app stores, supported logistics operations, and been used on offshore oil platforms.\nI care about more than making things work today. I build systems that can evolve, APIs that teams can rely on, and code that makes sense to the engineer who has to maintain it tomorrow.",
     "about.education.label": "Education",
     "about.education.school":
       "Computer Systems Engineering — Universidad Politécnica de Tulancingo",
-    "experience.label": "Chapters",
+    "experience.label": "Experience",
     "experience.achievements.12years.value": "12+",
     "experience.achievements.12years.label": "Years",
     "experience.achievements.12years.context":
@@ -322,8 +326,8 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
        "Operations continued without connectivity. Data integrity maintained.",
     "experience.apps.label": "Published apps",
     "experience.apps.title": "Software people can install.",
-    "experience.apps.subtitle":
-      "A selection of production mobile apps I have contributed to, available on Google Play.",
+     "experience.apps.subtitle":
+       "A selection of production mobile apps I have contributed to, available on Google Play and the App Store.",
     "experience.apps.mecanix.description":
       "Fleet maintenance and vehicle status tracking for Grupo Traxion.",
     "experience.apps.saeko.description":
@@ -332,7 +336,9 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
       "Employee app with vehicles, announcements, activities, trips, and service appointments.",
     "experience.apps.cotemar.description":
       "Employee and supplier services, operational information, and offshore safety resources.",
-    "experience.apps.playStore": "View on Google Play",
+     "experience.apps.playStore": "View on Google Play",
+     "experience.apps.appStore": "View on App Store",
+     "experience.apps.iosClosed": "iOS app for closed use",
     "stack.label": "Stack",
     "stack.title": "Production-proven stack.",
     "stack.subtitle":
@@ -558,12 +564,13 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
       "Escribo código que vive en servidores para ayudar a las personas y negocios.",
     "hero.meta": "Ingeniero Senior Full-Stack",
     "about.label": "Sobre mi",
+    "about.title": "Me gusta construir cosas que realmente funcionan",
     "about.bio":
-      "Construyo software que sobrevive en producción. Doce años llevando ideas del concepto al despliegue — web, móvil y backend. Mi trabajo vive en camiones de logística, plataformas petroleras y app stores. Me importa la arquitectura que sobrevive al sprint, las APIs que no rompen contratos, y el código que el siguiente ingeniero puede mantener.",
+      "Durante más de 12 años he estado convirtiendo ideas en software: desde aplicaciones móviles y plataformas web hasta APIs y sistemas que terminan corriendo en producción.\nHe trabajado con software utilizado en logística, plataformas petroleras y app stores. Y con el tiempo aprendí que escribir código es solo una parte del trabajo.\nLo importante es construir sistemas que puedan crecer, que no se rompan con cada cambio y que otro ingeniero pueda entender meses después de que tú los escribiste.",
     "about.education.label": "Educación",
     "about.education.school":
       "Ingeniería en Sistemas Computacionales — Universidad Politécnica de Tulancingo",
-    "experience.label": "Capítulos",
+    "experience.label": "Experiencia",
     "experience.achievements.12years.value": "12+",
     "experience.achievements.12years.label": "Años",
     "experience.achievements.12years.context":
@@ -642,8 +649,8 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
        "Las operaciones continuaron sin conectividad. La integridad de datos se mantuvo.",
     "experience.apps.label": "Apps publicadas",
     "experience.apps.title": "Software que la gente puede instalar.",
-    "experience.apps.subtitle":
-      "Una selección de aplicaciones móviles en producción en las que he participado, disponibles en Google Play.",
+     "experience.apps.subtitle":
+       "Una selección de aplicaciones móviles en producción en las que he participado, disponibles en Google Play y App Store.",
     "experience.apps.mecanix.description":
       "Mantenimiento de flota y seguimiento del estado de unidades para Grupo Traxion.",
     "experience.apps.saeko.description":
@@ -652,7 +659,9 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
       "App para colaboradores con vehículos, anuncios, actividades, viajes y citas de servicio.",
     "experience.apps.cotemar.description":
       "Servicios para colaboradores y proveedores, información operativa y recursos de seguridad offshore.",
-    "experience.apps.playStore": "Ver en Google Play",
+     "experience.apps.playStore": "Ver en Google Play",
+     "experience.apps.appStore": "Ver en App Store",
+     "experience.apps.iosClosed": "App de iOS de uso cerrado",
     "stack.label": "Stack",
     "stack.title": "Stack probado en producción.",
     "stack.subtitle":
