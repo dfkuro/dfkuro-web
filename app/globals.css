@@ -122,6 +122,28 @@ html {
   box-shadow: 0 0 0 3px rgba(240, 75, 160, 0.15);
 }
 
+/* Apple-inspired translucent navigation */
+.nav-glass {
+  background-color: color-mix(in srgb, var(--color-bg) 68%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-border) 68%, transparent);
+  -webkit-backdrop-filter: blur(20px) saturate(1.35);
+  backdrop-filter: blur(20px) saturate(1.35);
+  box-shadow: 0 8px 30px rgb(9 9 11 / 0.04);
+}
+
+.nav-glass.is-scrolled {
+  background-color: color-mix(in srgb, var(--color-bg) 82%, transparent);
+  box-shadow: 0 8px 30px rgb(9 9 11 / 0.08);
+}
+
+.dark .nav-glass {
+  box-shadow: 0 8px 30px rgb(0 0 0 / 0.16);
+}
+
+.dark .nav-glass.is-scrolled {
+  box-shadow: 0 8px 30px rgb(0 0 0 / 0.28);
+}
+
 /* Utilities */
 .container {
   width: 100%;

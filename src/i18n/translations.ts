@@ -30,6 +30,7 @@ type TranslationKey =
   | "hero.subtitleLine2"
   | "hero.meta"
   | "about.label"
+  | "about.title"
   | "about.bio"
   | "about.education.label"
   | "about.education.school"
@@ -91,6 +92,8 @@ type TranslationKey =
    | "experience.apps.mindone.description"
    | "experience.apps.cotemar.description"
    | "experience.apps.playStore"
+   | "experience.apps.appStore"
+   | "experience.apps.iosClosed"
    | "stack.label"
   | "stack.title"
   | "stack.subtitle"
@@ -235,15 +238,16 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     "hero.headlineAccent": "production software.",
     "hero.subtitle": "I do not write code that lives in slides.",
     "hero.subtitleLine2":
-      "I write code that lives in servers, trucks, and oil rigs.",
+      "I write code that lives in servers to help people and business.",
     "hero.meta": "Senior Full-Stack Software Engineer",
     "about.label": "About my",
+    "about.title": "I build software that makes it to production",
     "about.bio":
-      "I build software that survives production. Twelve years of taking ideas from concept to deployment — web, mobile, and backend. My work lives in logistics trucks, oil rigs, and app stores. I care about architecture that outlasts the sprint, APIs that do not break contracts, and code the next engineer can actually maintain.",
+      "For more than 12 years, I've been turning ideas into real products — from mobile and web applications to APIs and backend systems.\nMy work has shipped to app stores, supported logistics operations, and been used on offshore oil platforms.\nI care about more than making things work today. I build systems that can evolve, APIs that teams can rely on, and code that makes sense to the engineer who has to maintain it tomorrow.",
     "about.education.label": "Education",
     "about.education.school":
       "Computer Systems Engineering — Universidad Politécnica de Tulancingo",
-    "experience.label": "Chapters",
+    "experience.label": "Experience",
     "experience.achievements.12years.value": "12+",
     "experience.achievements.12years.label": "Years",
     "experience.achievements.12years.context":
@@ -322,8 +326,8 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
        "Operations continued without connectivity. Data integrity maintained.",
     "experience.apps.label": "Published apps",
     "experience.apps.title": "Software people can install.",
-    "experience.apps.subtitle":
-      "A selection of production mobile apps I have contributed to, available on Google Play.",
+     "experience.apps.subtitle":
+       "A selection of production mobile apps I have contributed to, available on Google Play and the App Store.",
     "experience.apps.mecanix.description":
       "Fleet maintenance and vehicle status tracking for Grupo Traxion.",
     "experience.apps.saeko.description":
@@ -332,7 +336,9 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
       "Employee app with vehicles, announcements, activities, trips, and service appointments.",
     "experience.apps.cotemar.description":
       "Employee and supplier services, operational information, and offshore safety resources.",
-    "experience.apps.playStore": "View on Google Play",
+     "experience.apps.playStore": "View on Google Play",
+     "experience.apps.appStore": "View on App Store",
+     "experience.apps.iosClosed": "iOS app for closed use",
     "stack.label": "Stack",
     "stack.title": "Production-proven stack.",
     "stack.subtitle":
@@ -509,12 +515,12 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
       "I have shipped with jQuery, Angular, Vue, and now React. Frameworks come and go, but the fundamentals — separation of concerns, clear interfaces, testing — stay. I learn new tools when they solve real problems, not because they are trending.",
     "currently.label": "Currently",
     "currently.title": "What I am doing right now.",
-    "currently.building.label": "Building",
-    "currently.building.value":
-      "A real-time logistics dashboard for field supervisors. React, Fastify, PostgreSQL.",
-    "currently.learning.label": "Learning",
-    "currently.learning.value":
-      "Rust — not to rewrite everything, but to understand memory safety and systems programming deeply.",
+     "currently.building.label": "Building",
+     "currently.building.value":
+       "Development and modernization of internal systems used by call center teams, implementing modern technologies to optimize processes, improve user experience, and simplify daily operations management.",
+     "currently.learning.label": "Learning",
+     "currently.learning.value":
+       "AI, LLMs, and MCP — Exploring and implementing solutions based on artificial intelligence, LLMs, and MCP resources to continuously improve business processes and optimize software development workflows.",
     "currently.exploring.label": "Exploring",
     "currently.exploring.value":
       "Local-first software architecture and CRDTs for offline collaboration.",
@@ -533,7 +539,7 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     "contact.copied": "Copied",
     "contact.failed": "Failed",
     "footer.copyright": 'izmir.dev <span class="footer-alias">(dfkuro)</span>',
-    "footer.hint": "Type :set nu in any editor to see line numbers.",
+    "footer.hint": "Make it work, make it right, make it fast. — Kent Beck",
     "terminal.welcome":
       'Welcome to izmir.dev — type <span class="term-cmd">help</span> to begin.',
     "terminal.prompt": "dfkuro@izmir.dev:~$",
@@ -555,15 +561,16 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     "hero.headlineAccent": "software en producción.",
     "hero.subtitle": "No escribo código para presentaciones.",
     "hero.subtitleLine2":
-      "Escribo código que vive en servidores, camiones y plataformas petroleras.",
+      "Escribo código que vive en servidores para ayudar a las personas y negocios.",
     "hero.meta": "Ingeniero Senior Full-Stack",
     "about.label": "Sobre mi",
+    "about.title": "Me gusta construir cosas que realmente funcionan",
     "about.bio":
-      "Construyo software que sobrevive en producción. Doce años llevando ideas del concepto al despliegue — web, móvil y backend. Mi trabajo vive en camiones de logística, plataformas petroleras y app stores. Me importa la arquitectura que sobrevive al sprint, las APIs que no rompen contratos, y el código que el siguiente ingeniero puede mantener.",
+      "Durante más de 12 años he estado convirtiendo ideas en software: desde aplicaciones móviles y plataformas web hasta APIs y sistemas que terminan corriendo en producción.\nHe trabajado con software utilizado en logística, plataformas petroleras y app stores. Y con el tiempo aprendí que escribir código es solo una parte del trabajo.\nLo importante es construir sistemas que puedan crecer, que no se rompan con cada cambio y que otro ingeniero pueda entender meses después de que tú los escribiste.",
     "about.education.label": "Educación",
     "about.education.school":
       "Ingeniería en Sistemas Computacionales — Universidad Politécnica de Tulancingo",
-    "experience.label": "Capítulos",
+    "experience.label": "Experiencia",
     "experience.achievements.12years.value": "12+",
     "experience.achievements.12years.label": "Años",
     "experience.achievements.12years.context":
@@ -642,8 +649,8 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
        "Las operaciones continuaron sin conectividad. La integridad de datos se mantuvo.",
     "experience.apps.label": "Apps publicadas",
     "experience.apps.title": "Software que la gente puede instalar.",
-    "experience.apps.subtitle":
-      "Una selección de aplicaciones móviles en producción en las que he participado, disponibles en Google Play.",
+     "experience.apps.subtitle":
+       "Una selección de aplicaciones móviles en producción en las que he participado, disponibles en Google Play y App Store.",
     "experience.apps.mecanix.description":
       "Mantenimiento de flota y seguimiento del estado de unidades para Grupo Traxion.",
     "experience.apps.saeko.description":
@@ -652,7 +659,9 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
       "App para colaboradores con vehículos, anuncios, actividades, viajes y citas de servicio.",
     "experience.apps.cotemar.description":
       "Servicios para colaboradores y proveedores, información operativa y recursos de seguridad offshore.",
-    "experience.apps.playStore": "Ver en Google Play",
+     "experience.apps.playStore": "Ver en Google Play",
+     "experience.apps.appStore": "Ver en App Store",
+     "experience.apps.iosClosed": "App de iOS de uso cerrado",
     "stack.label": "Stack",
     "stack.title": "Stack probado en producción.",
     "stack.subtitle":
@@ -831,12 +840,12 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
       "He desplegado con jQuery, Angular, Vue, y ahora React. Los frameworks van y vienen, pero los fundamentos — separación de responsabilidades, interfaces claras, pruebas — permanecen. Aprendo herramientas nuevas cuando resuelven problemas reales, no porque están de moda.",
     "currently.label": "Actualmente",
     "currently.title": "Qué estoy haciendo ahora.",
-    "currently.building.label": "Construyendo",
-    "currently.building.value":
-      "Un dashboard logístico en tiempo real para supervisores de campo. React, Fastify, PostgreSQL.",
-    "currently.learning.label": "Aprendiendo",
-    "currently.learning.value":
-      "Rust — no para reescribir todo, sino para entender la seguridad de memoria y la programación de sistemas a fondo.",
+     "currently.building.label": "Construyendo",
+     "currently.building.value":
+       "Desarrollo y modernización de sistemas internos utilizados por equipos de call center, implementando tecnologías modernas para optimizar procesos, mejorar la experiencia de usuario y facilitar la gestión de sus operaciones diarias.",
+     "currently.learning.label": "Aprendiendo",
+     "currently.learning.value":
+       "IA, LLMs y MCP — Exploración e implementación de soluciones basadas en inteligencia artificial, LLMs y recursos MCP para la mejora continua de procesos empresariales y la optimización de flujos de desarrollo de software.",
     "currently.exploring.label": "Explorando",
     "currently.exploring.value":
       "Arquitectura local-first y CRDTs para colaboración offline.",
@@ -855,8 +864,7 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     "contact.copied": "Copiado",
     "contact.failed": "Error",
     "footer.copyright": 'izmir.dev <span class="footer-alias">(dfkuro)</span>',
-    "footer.hint":
-      "Escribe :set nu en cualquier editor para ver números de línea.",
+    "footer.hint": "Haz que funcione, hazlo bien, hazlo rápido. — Kent Beck",
     "terminal.welcome":
       'Bienvenido a izmir.dev — escribe <span class="term-cmd">help</span> para comenzar.',
     "terminal.prompt": "dfkuro@izmir.dev:~$",

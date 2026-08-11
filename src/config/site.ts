@@ -6,6 +6,10 @@ export const siteConfig = {
   alias: 'dfkuro',
   url: 'https://izmir.dev',
   email: 'izmirreffi@gmail.com',
+  social: {
+    github: 'https://github.com/dfkuro',
+    linkedin: 'https://mx.linkedin.com/in/izmirsanchez',
+  },
   lang: 'en',
   locale: 'en_US',
   nav: [

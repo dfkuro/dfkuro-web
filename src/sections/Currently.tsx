@@ -9,8 +9,8 @@ const items = [
   { id: "building" },
   { id: "learning" },
   { id: "exploring" },
-  { id: "reading" },
-  { id: "experimenting" },
+  // { id: "reading" },
+  // { id: "experimenting" },
 ];
 
 export default function Currently({ lang }: CurrentlyProps) {
@@ -24,12 +24,12 @@ export default function Currently({ lang }: CurrentlyProps) {
           {items.map((item, i) => (
             <div
               key={item.id}
-              className="flex flex-col gap-3 p-6 bg-surface border border-border rounded-lg transition-all duration-normal ease-out-quart hover:border-magic hover:-translate-y-0.5 hover:shadow-glow-sm"
+              className={`flex flex-col gap-3 p-6 bg-surface border border-border rounded-lg transition-all duration-normal ease-out-quart hover:border-magic hover:-translate-y-0.5 hover:shadow-glow-sm ${i === items.length - 1 && items.length % 2 !== 0 ? "sm:col-span-2" : ""}`}
               style={{ animation: `fade-in-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards`, animationDelay: `${i * 0.08}s` }}
             >
               <div className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-magic animate-pulse-dot" aria-hidden="true" />
-                <span className="font-mono text-xs uppercase tracking-wider text-text-muted">
+                <span className="font-mono text-xs uppercase tracking-wider text-magic font-bold">
                   {t(lang as any, `currently.${item.id}.label` as any)}
                 </span>
               </div>

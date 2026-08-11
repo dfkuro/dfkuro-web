@@ -37,6 +37,7 @@ export default function CommandPalette({ lang }: CommandPaletteProps) {
   const visible = commands.filter((c) => c.label.toLowerCase().includes(query.toLowerCase()));
 
   useEffect(() => {
+    const open = () => setIsOpen(true);
     const onKeyDown = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key === "k") {
         e.preventDefault();
@@ -52,7 +53,11 @@ export default function CommandPalette({ lang }: CommandPaletteProps) {
     };
 
     document.addEventListener("keydown", onKeyDown);
-    return () => document.removeEventListener("keydown", onKeyDown);
+    document.addEventListener("open-command-palette", open);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.removeEventListener("open-command-palette", open);
+    };
   }, []);
 
   useEffect(() => {
@@ -150,7 +155,7 @@ export default function CommandPalette({ lang }: CommandPaletteProps) {
             aria-autocomplete="list"
             aria-controls="cmd-list"
           />
-          <kbd className="font-mono text-[0.625rem] px-2 py-1 border border-border rounded-sm text-text-muted bg-background">{t(lang as any, "palette.esc")}</kbd>
+          <kbd className="font-mono text-micro px-2 py-1 border border-border rounded-sm text-text-muted bg-background">{t(lang as any, "palette.esc")}</kbd>
         </div>
         <ul ref={listRef} id="cmd-list" role="listbox" className="list-none max-h-[400px] overflow-y-auto p-2">
           {visible.map((cmd, i) => (
@@ -167,7 +172,7 @@ export default function CommandPalette({ lang }: CommandPaletteProps) {
                 <Icon name={cmd.icon} size={16} />
                 <span className="text-sm font-medium">{cmd.label}</span>
               </div>
-              <kbd className="font-mono text-[0.625rem] px-2 py-1 border border-border rounded-sm text-text-muted bg-background">{cmd.shortcut}</kbd>
+              <kbd className="font-mono text-micro px-2 py-1 border border-border rounded-sm text-text-muted bg-background">{cmd.shortcut}</kbd>
             </li>
           ))}
         </ul>

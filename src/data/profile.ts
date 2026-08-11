@@ -12,6 +12,6 @@ export const profile: Profile = {
   status: 'available',
   bio: 'I build software that survives production. Twelve years of taking ideas from concept to deployment — web, mobile, and backend. My work lives in logistics trucks, oil rigs, and app stores. I care about architecture that outlasts the sprint, APIs that do not break contracts, and code the next engineer can actually maintain.',
   uptime: '12+ years',
-  shell: 'zsh',
-  editor: 'Neovim',
+  shell: 'zsh / bash',
+  editor: 'Neovim / Zed / Vscode',
 };

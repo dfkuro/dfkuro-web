@@ -24,30 +24,34 @@ const publishedApps = [
     name: "Mecanix-e",
     publisher: "Grupo Traxion",
     packageId: "mx.mecanixtrax",
+    iosClosed: true,
   },
   {
     id: "saeko",
     name: "Saeko App",
     publisher: "Saeko",
     packageId: "com.kioru.app.saeko",
+    appStoreUrl: "https://apps.apple.com/mx/app/saeko/id1477257337",
   },
   {
     id: "mindone",
     name: "Mi Copiloto",
     publisher: "Grupo Traxion",
     packageId: "com.mindone",
+    iosClosed: true,
   },
   {
     id: "cotemar",
     name: "COTEMAR",
     publisher: "COTEMAR SA DE CV",
     packageId: "com.cotemar.cotemar",
+    appStoreUrl: "https://apps.apple.com/mx/app/cotemar/id1378653080",
   },
 ];
 
 export default function Experience({ lang }: ExperienceProps) {
   return (
-    <section id="experience" className="py-24" aria-label="Experience">
+    <section id="experience" className="py-12" aria-label="Experience">
       <div className="container">
         <div className="max-w-[900px] mx-auto">
           <span className="caption block mb-10 text-center">
@@ -72,7 +76,7 @@ export default function Experience({ lang }: ExperienceProps) {
                     `experience.achievements.${a.key}.label` as any,
                   )}
                 </span>
-                <span className="text-[0.8125rem] text-text-secondary leading-snug mt-1">
+                <span className="text-label text-text-secondary leading-snug mt-1">
                   {t(
                     lang as any,
                     `experience.achievements.${a.key}.context` as any,
@@ -92,7 +96,7 @@ export default function Experience({ lang }: ExperienceProps) {
                 className="flex flex-col items-center gap-2 pt-2"
                 aria-hidden="true"
               >
-                <span className="font-mono text-[0.6875rem] text-text-muted opacity-60">
+                <span className="font-mono text-overline text-text-muted opacity-60">
                   {chapter.hash}
                 </span>
                 <div
@@ -107,7 +111,7 @@ export default function Experience({ lang }: ExperienceProps) {
               <div className="flex flex-col gap-6 pb-8 border-b border-border">
                 <header className="mb-2">
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="font-mono text-[0.6875rem] uppercase tracking-wider text-magic font-medium">
+                    <span className="font-mono text-overline uppercase tracking-wider text-magic font-medium">
                       {/*{t(
                         lang as any,
                         `experience.chapter.${chapter.id}.chapter` as any,
@@ -130,7 +134,7 @@ export default function Experience({ lang }: ExperienceProps) {
                       `experience.chapter.${chapter.id}.company` as any,
                     )}
                   </h3>
-                  <p className="text-[0.9375rem] text-text-secondary">
+                  <p className="text-body-sm text-text-secondary">
                     {t(
                       lang as any,
                       `experience.chapter.${chapter.id}.role` as any,
@@ -139,10 +143,10 @@ export default function Experience({ lang }: ExperienceProps) {
                 </header>
 
                 <div className="flex flex-col gap-2">
-                  <span className="self-start font-mono text-[0.6875rem] uppercase tracking-wider text-text-muted font-medium px-2 py-1 bg-background border border-border rounded-sm">
+                  <span className="self-start font-mono text-overline uppercase tracking-wider text-text-muted font-medium px-2 py-1 bg-background border border-border rounded-sm">
                     Context
                   </span>
-                  <p className="text-[0.9375rem] leading-relaxed text-text-secondary max-w-[640px]">
+                  <p className="text-body-sm leading-relaxed text-text-secondary max-w-[640px]">
                     {t(
                       lang as any,
                       `experience.chapter.${chapter.id}.context` as any,
@@ -151,10 +155,10 @@ export default function Experience({ lang }: ExperienceProps) {
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <span className="self-start font-mono text-[0.6875rem] uppercase tracking-wider text-red-500 font-medium px-2 py-1 bg-red-500/[0.06] border border-red-500/20 rounded-sm">
+                  <span className="self-start font-mono text-overline uppercase tracking-wider text-red-500 font-medium px-2 py-1 bg-red-500/[0.06] border border-red-500/20 rounded-sm">
                     Problem
                   </span>
-                  <p className="text-[0.9375rem] leading-relaxed text-text-secondary max-w-[640px]">
+                  <p className="text-body-sm leading-relaxed text-text-secondary max-w-[640px]">
                     {t(
                       lang as any,
                       `experience.chapter.${chapter.id}.problem` as any,
@@ -163,10 +167,10 @@ export default function Experience({ lang }: ExperienceProps) {
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <span className="self-start font-mono text-[0.6875rem] uppercase tracking-wider text-magic font-medium px-2 py-1 bg-magic-soft border border-magic-soft rounded-sm">
+                  <span className="self-start font-mono text-overline uppercase tracking-wider text-magic font-medium px-2 py-1 bg-magic-soft border border-magic-soft rounded-sm">
                     Solution
                   </span>
-                  <p className="text-[0.9375rem] leading-relaxed text-text-secondary max-w-[640px]">
+                  <p className="text-body-sm leading-relaxed text-text-secondary max-w-[640px]">
                     {t(
                       lang as any,
                       `experience.chapter.${chapter.id}.solution` as any,
@@ -175,10 +179,10 @@ export default function Experience({ lang }: ExperienceProps) {
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <span className="self-start font-mono text-[0.6875rem] uppercase tracking-wider text-green-500 font-medium px-2 py-1 bg-green-500/[0.06] border border-green-500/20 rounded-sm">
+                  <span className="self-start font-mono text-overline uppercase tracking-wider text-green-500 font-medium px-2 py-1 bg-green-500/[0.06] border border-green-500/20 rounded-sm">
                     Impact
                   </span>
-                  <p className="text-[0.9375rem] leading-relaxed text-text-secondary max-w-[640px]">
+                  <p className="text-body-sm leading-relaxed text-text-secondary max-w-[640px]">
                     {t(
                       lang as any,
                       `experience.chapter.${chapter.id}.impact` as any,
@@ -188,7 +192,7 @@ export default function Experience({ lang }: ExperienceProps) {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2 p-5 bg-surface border border-border rounded-lg">
                   <div>
-                    <span className="block font-mono text-[0.6875rem] uppercase tracking-wider text-text-muted mb-2">
+                    <span className="block font-mono text-overline uppercase tracking-wider text-text-muted mb-2">
                       Tech
                     </span>
                     <p className="text-sm leading-relaxed text-text-secondary">
@@ -199,7 +203,7 @@ export default function Experience({ lang }: ExperienceProps) {
                     </p>
                   </div>
                   <div>
-                    <span className="block font-mono text-[0.6875rem] uppercase tracking-wider text-text-muted mb-2">
+                    <span className="block font-mono text-overline uppercase tracking-wider text-text-muted mb-2">
                       Result
                     </span>
                     <p className="text-sm leading-relaxed text-text font-medium">
@@ -223,7 +227,7 @@ export default function Experience({ lang }: ExperienceProps) {
           <h2 className="h2 text-text mb-2 max-w-[560px]">
             {t(lang as any, "experience.apps.title")}
           </h2>
-          <p className="text-[0.9375rem] text-text-secondary mb-8 max-w-[600px]">
+          <p className="text-body-sm text-text-secondary mb-8 max-w-[600px]">
             {t(lang as any, "experience.apps.subtitle")}
           </p>
 
@@ -243,20 +247,36 @@ export default function Experience({ lang }: ExperienceProps) {
                     </p>
                   </div>
                   <span className="font-mono text-xs text-magic" aria-hidden="true">
-                    Android
+                    Android/iOS
                   </span>
                 </div>
                 <p className="text-sm leading-relaxed text-text-secondary flex-1">
                   {t(lang as any, `experience.apps.${app.id}.description` as any)}
                 </p>
-                <a
-                  href={`https://play.google.com/store/apps/details?id=${app.packageId}&hl=en`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="link-underline self-start text-sm font-medium text-text"
-                >
-                  {t(lang as any, "experience.apps.playStore")} <span aria-hidden="true">↗</span>
-                </a>
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                  <a
+                    href={`https://play.google.com/store/apps/details?id=${app.packageId}&hl=en`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="link-underline self-start text-sm font-medium text-text"
+                  >
+                    {t(lang as any, "experience.apps.playStore")} <span aria-hidden="true">↗</span>
+                  </a>
+                  {app.appStoreUrl ? (
+                    <a
+                      href={app.appStoreUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="link-underline self-start text-sm font-medium text-text"
+                    >
+                      {t(lang as any, "experience.apps.appStore")} <span aria-hidden="true">↗</span>
+                    </a>
+                  ) : app.iosClosed ? (
+                    <span className="text-xs text-text-muted">
+                      {t(lang as any, "experience.apps.iosClosed")}
+                    </span>
+                  ) : null}
+                </div>
               </article>
             ))}
           </div>

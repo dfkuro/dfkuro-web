@@ -22,6 +22,10 @@ export async function generateMetadata({
   return {
     title,
     description,
+    icons: {
+      icon: "/favicon.svg?v=3",
+      shortcut: "/favicon.svg?v=3",
+    },
     openGraph: {
       type: "website",
       url: siteConfig.url,

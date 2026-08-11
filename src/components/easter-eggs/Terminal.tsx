@@ -160,14 +160,14 @@ export default function Terminal({ lang }: TerminalProps) {
         <button
           className="w-6 h-6 flex items-center justify-center bg-transparent border-none text-text-muted text-xl cursor-pointer rounded-sm transition-colors duration-fast hover:text-text hover:bg-white/[0.06]"
           type="button"
-          aria-label="Close terminal"
+           aria-label={lang === "es" ? "Cerrar la terminal" : "Close terminal"}
           onClick={close}
         >
           &times;
         </button>
       </div>
 
-      <div ref={bodyRef} className="flex-1 p-4 overflow-y-auto font-mono text-[0.8125rem] leading-relaxed text-[#E4E4E7]" role="log" aria-live="polite" aria-atomic="false">
+      <div ref={bodyRef} className="flex-1 p-4 overflow-y-auto font-mono text-label leading-relaxed text-[#E4E4E7]" role="log" aria-live="polite" aria-atomic="false">
         {lines.map((line, i) => (
           <div key={i} className="mb-2 whitespace-pre-wrap break-words" dangerouslySetInnerHTML={{ __html: line.html }} />
         ))}
@@ -180,14 +180,14 @@ export default function Terminal({ lang }: TerminalProps) {
         <input
           ref={inputRef}
           type="text"
-          className="flex-1 bg-transparent border-none outline-none font-mono text-[0.8125rem] text-[#FAFAFA] caret-magic ml-2"
+          className="flex-1 bg-transparent border-none outline-none font-mono text-label text-[#FAFAFA] caret-magic ml-2"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           onKeyDown={handleKeyDown}
           autoComplete="off"
           autoCapitalize="off"
           spellCheck={false}
-          aria-label="Terminal command"
+           aria-label={lang === "es" ? "Comando de terminal" : "Terminal command"}
           placeholder=""
         />
       </div>

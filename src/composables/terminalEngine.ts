@@ -43,7 +43,7 @@ export function createTerminalEngine(
 
   commands.set('ls', {
     name: 'ls',
-    description: t('List portfolio sections', 'Listar secciones del portafolio'),
+    description: t('List portfolio sections', 'Enumerar secciones del portafolio'),
     execute: () => [t('Sections:', 'Secciones:'), ...context.sections.map((s) => `  <span class="term-dir">${s}/</span>`)],
   });
 
@@ -80,13 +80,13 @@ export function createTerminalEngine(
 
   commands.set('clear', {
     name: 'clear',
-    description: t('Clear terminal screen', 'Limpiar pantalla del terminal'),
+    description: t('Clear terminal screen', 'Limpiar la pantalla de la terminal'),
     execute: () => '___CLEAR___',
   });
 
   commands.set('exit', {
     name: 'exit',
-    description: t('Close terminal', 'Cerrar terminal'),
+    description: t('Close terminal', 'Cerrar la terminal'),
     execute: () => '___EXIT___',
   });
 
@@ -98,8 +98,8 @@ export function createTerminalEngine(
         context.onSudoHire();
         return [
           `<span class="term-warn">[sudo] ${t('password for visitor:', 'contraseña para visitante:')} </span> ********`,
-          t('Transmitting application...', 'Transmitiendo aplicación...'),
-          `<span class="term-success">${t('Done. Application sent to izmirreffi@gmail.com', 'Hecho. Aplicación enviada a izmirreffi@gmail.com')}</span>`,
+          t('Transmitting application...', 'Enviando solicitud...'),
+          `<span class="term-success">${t('Done. Application sent to izmirreffi@gmail.com', 'Hecho. Solicitud enviada a izmirreffi@gmail.com')}</span>`,
           '',
           t('You have unlocked a secret.', 'Has desbloqueado un secreto.'),
         ];

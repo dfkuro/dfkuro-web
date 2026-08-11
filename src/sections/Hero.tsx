@@ -52,9 +52,11 @@ export default function Hero({ lang }: HeroProps) {
         </div>
 
         <h1 className="display text-text mb-6">
-          {t(lang as any, "hero.headline")}
+          <span className="inline-flex items-center gap-[0.18em]">
+            {t(lang as any, "hero.headline")}
+          </span>
           <br />
-          <span className="display-secondary text-text-secondary font-normal">{t(lang as any, "hero.headlineAccent")}</span>
+          <span className="display-secondary text-magic font-normal">{t(lang as any, "hero.headlineAccent")}</span>
         </h1>
 
         <p className="text-lg text-text-secondary mb-10 leading-relaxed max-w-[560px]">
@@ -68,21 +70,21 @@ export default function Hero({ lang }: HeroProps) {
             <span className="font-mono text-xl sm:text-2xl font-medium text-text tracking-tight leading-none">
               <span ref={counterRef} className="counter-target" data-target="12">0</span>
             </span>
-            <span className="font-mono text-[0.6875rem] uppercase tracking-wider text-text-muted">{lang === "en" ? "Years" : "Años"}</span>
+            <span className="font-mono text-overline uppercase tracking-wider text-text-muted">{lang === "en" ? "Years" : "Años"}</span>
           </div>
           <div className="w-px h-8 bg-border" />
           <div className="flex flex-col gap-1">
             <span className="font-mono text-xl sm:text-2xl font-medium text-text tracking-tight leading-none">
               40<span className="text-magic text-sm">+</span>
             </span>
-            <span className="font-mono text-[0.6875rem] uppercase tracking-wider text-text-muted">{lang === "en" ? "Projects" : "Proyectos"}</span>
+            <span className="font-mono text-overline uppercase tracking-wider text-text-muted">{lang === "en" ? "Projects" : "Proyectos"}</span>
           </div>
           <div className="w-px h-8 bg-border" />
           <div className="flex flex-col gap-1">
             <span className="font-mono text-xl sm:text-2xl font-medium text-text tracking-tight leading-none">
               30k<span className="text-magic text-sm">+</span>
             </span>
-            <span className="font-mono text-[0.6875rem] uppercase tracking-wider text-text-muted">{lang === "en" ? "Daily Users" : "Usuarios"}</span>
+            <span className="font-mono text-overline uppercase tracking-wider text-text-muted">{lang === "en" ? "Daily Users" : "Usuarios"}</span>
           </div>
         </div>
       </div>
