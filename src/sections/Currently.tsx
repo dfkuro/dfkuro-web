@@ -43,7 +43,7 @@ export default function Currently({ lang }: CurrentlyProps) {
         <div className="mt-10 max-w-[560px]">
           <p className="font-mono text-xs text-text-muted opacity-70">
             {lang === "en"
-              ? "This section updates as my focus shifts. Last modified: 2026-07-29."
+              ? "This section updates as my focus shifts. Last modified: 2026-08-10."
               : "Esta sección se actualiza cuando mi enfoque cambia. Última modificación: 2026-07-29."}
           </p>
         </div>
