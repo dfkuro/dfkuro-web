@@ -1,16 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <title>Izmir Sanchez</title>
-  <rect width="32" height="32" rx="8" fill="#FAFAFA" />
-  <rect x="0.75" y="0.75" width="30.5" height="30.5" rx="7.25" fill="none" stroke="#E4E4E7" stroke-width="1.5" />
-  <text class="brand-mark" x="5" y="23" fill="#09090B" font-family="Arial, sans-serif" font-size="18" font-weight="700">D</text>
-  <rect x="19" y="21.5" width="6" height="2" rx="1" fill="#09090B" />
-  <circle cx="27.5" cy="22.5" r="1.75" fill="#D9047A" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>dfkuro terminal</title>
+  <rect width="64" height="64" rx="14" fill="#09090B" />
+  <rect x="2" y="2" width="60" height="60" rx="12" fill="none" stroke="#3F3F46" stroke-width="3" />
+  <path d="M3.5 19h57" stroke="#27272A" stroke-width="2" />
+  <circle cx="12.5" cy="10.5" r="3" fill="#F04BA0" />
+  <circle cx="22" cy="10.5" r="3" fill="#71717A" />
+  <circle cx="31.5" cy="10.5" r="3" fill="#FAFAFA" />
+  <text x="15" y="46" fill="#FAFAFA" font-family="JetBrains Mono, monospace" font-size="25" font-weight="500" letter-spacing="-2">Df</text>
+  <rect x="43" y="42" width="10" height="4" rx="1" fill="#F04BA0" />
   <style>
-    @media (prefers-color-scheme: dark) {
+    @media (prefers-color-scheme: light) {
       rect:first-child { fill: #18181B; }
-      rect:nth-child(2) { stroke: #3F3F46; }
-      .brand-mark, rect:nth-of-type(3) { fill: #FAFAFA; }
-      circle:last-of-type { fill: #F04BA0; }
+      rect:nth-child(2) { stroke: #52525B; }
     }
   </style>
 </svg>

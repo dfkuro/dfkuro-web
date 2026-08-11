@@ -515,12 +515,12 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
       "I have shipped with jQuery, Angular, Vue, and now React. Frameworks come and go, but the fundamentals — separation of concerns, clear interfaces, testing — stay. I learn new tools when they solve real problems, not because they are trending.",
     "currently.label": "Currently",
     "currently.title": "What I am doing right now.",
-    "currently.building.label": "Building",
-    "currently.building.value":
-      "A real-time logistics dashboard for field supervisors. React, Fastify, PostgreSQL.",
-    "currently.learning.label": "Learning",
-    "currently.learning.value":
-      "Rust — not to rewrite everything, but to understand memory safety and systems programming deeply.",
+     "currently.building.label": "Building",
+     "currently.building.value":
+       "Development and modernization of internal systems used by call center teams, implementing modern technologies to optimize processes, improve user experience, and simplify daily operations management.",
+     "currently.learning.label": "Learning",
+     "currently.learning.value":
+       "AI, LLMs, and MCP — Exploring and implementing solutions based on artificial intelligence, LLMs, and MCP resources to continuously improve business processes and optimize software development workflows.",
     "currently.exploring.label": "Exploring",
     "currently.exploring.value":
       "Local-first software architecture and CRDTs for offline collaboration.",
@@ -539,7 +539,7 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     "contact.copied": "Copied",
     "contact.failed": "Failed",
     "footer.copyright": 'izmir.dev <span class="footer-alias">(dfkuro)</span>',
-    "footer.hint": "Type :set nu in any editor to see line numbers.",
+    "footer.hint": "Make it work, make it right, make it fast. — Kent Beck",
     "terminal.welcome":
       'Welcome to izmir.dev — type <span class="term-cmd">help</span> to begin.',
     "terminal.prompt": "dfkuro@izmir.dev:~$",
@@ -840,12 +840,12 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
       "He desplegado con jQuery, Angular, Vue, y ahora React. Los frameworks van y vienen, pero los fundamentos — separación de responsabilidades, interfaces claras, pruebas — permanecen. Aprendo herramientas nuevas cuando resuelven problemas reales, no porque están de moda.",
     "currently.label": "Actualmente",
     "currently.title": "Qué estoy haciendo ahora.",
-    "currently.building.label": "Construyendo",
-    "currently.building.value":
-      "Un dashboard logístico en tiempo real para supervisores de campo. React, Fastify, PostgreSQL.",
-    "currently.learning.label": "Aprendiendo",
-    "currently.learning.value":
-      "Rust — no para reescribir todo, sino para entender la seguridad de memoria y la programación de sistemas a fondo.",
+     "currently.building.label": "Construyendo",
+     "currently.building.value":
+       "Desarrollo y modernización de sistemas internos utilizados por equipos de call center, implementando tecnologías modernas para optimizar procesos, mejorar la experiencia de usuario y facilitar la gestión de sus operaciones diarias.",
+     "currently.learning.label": "Aprendiendo",
+     "currently.learning.value":
+       "IA, LLMs y MCP — Exploración e implementación de soluciones basadas en inteligencia artificial, LLMs y recursos MCP para la mejora continua de procesos empresariales y la optimización de flujos de desarrollo de software.",
     "currently.exploring.label": "Explorando",
     "currently.exploring.value":
       "Arquitectura local-first y CRDTs para colaboración offline.",
@@ -864,8 +864,7 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     "contact.copied": "Copiado",
     "contact.failed": "Error",
     "footer.copyright": 'izmir.dev <span class="footer-alias">(dfkuro)</span>',
-    "footer.hint":
-      "Escribe :set nu en cualquier editor para ver números de línea.",
+    "footer.hint": "Haz que funcione, hazlo bien, hazlo rápido. — Kent Beck",
     "terminal.welcome":
       'Bienvenido a izmir.dev — escribe <span class="term-cmd">help</span> para comenzar.',
     "terminal.prompt": "dfkuro@izmir.dev:~$",

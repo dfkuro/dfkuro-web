@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { t } from "@i18n";
 import { siteConfig } from "@config/site";
 import LangSwitcher from "./LangSwitcher";
@@ -14,6 +14,11 @@ interface NavProps {
 export default function Nav({ lang }: NavProps) {
   const navRef = useRef<HTMLElement>(null);
   const progressRef = useRef<HTMLDivElement>(null);
+  const [isApple, setIsApple] = useState(false);
+
+  useEffect(() => {
+    setIsApple(/Mac|iPhone|iPad|iPod/i.test(navigator.platform || navigator.userAgent));
+  }, []);
 
   useEffect(() => {
     const nav = navRef.current;
@@ -80,11 +85,12 @@ export default function Nav({ lang }: NavProps) {
     <nav
       ref={navRef}
       id="main-nav"
-      className="fixed top-0 left-0 right-0 z-[1000] py-3 transition-all duration-normal ease-out-quart"
+      className="nav-glass fixed top-0 left-0 right-0 z-[1000] py-3 transition-all duration-normal ease-out-quart"
       aria-label="Main navigation"
     >
       <div className="container flex items-center justify-between">
-        <a href="#" className="inline-flex items-center gap-1 font-mono font-medium text-base text-text no-underline tracking-tight" aria-label="Home">
+        <a href="#" className="inline-flex items-center gap-2 font-mono font-medium text-base text-text no-underline tracking-tight" aria-label="Home">
+          <img src="/favicon.svg" alt="" aria-hidden="true" className="w-6 h-6 rounded-md shrink-0" />
           <span>izmir</span>
           <span className="w-1.5 h-1.5 rounded-full bg-magic animate-pulse-dot" aria-hidden="true" />
           <span className="text-xs text-magic ml-1 opacity-85 hover:opacity-100 transition-opacity duration-fast" aria-hidden="true">(dfkuro)</span>
@@ -135,9 +141,10 @@ export default function Nav({ lang }: NavProps) {
             className="hidden md:inline-flex items-center gap-1 px-3 py-2 border border-border rounded-sm bg-surface cursor-pointer transition-all duration-fast ease-out-quart hover:border-magic hover:shadow-glow-sm"
             type="button"
             aria-label="Open command palette"
-            title="Cmd+K"
+            title={`${isApple ? "Cmd" : "Ctrl"}+K`}
+            onClick={() => document.dispatchEvent(new CustomEvent("open-command-palette"))}
           >
-            <kbd className="font-mono text-xs text-text-muted bg-transparent">⌘</kbd>
+            <kbd className="font-mono text-xs text-text-muted bg-transparent">{isApple ? "⌘" : "Ctrl"}</kbd>
             <kbd className="font-mono text-xs text-text-muted bg-transparent">K</kbd>
           </button>
         </div>

@@ -52,9 +52,11 @@ export default function Hero({ lang }: HeroProps) {
         </div>
 
         <h1 className="display text-text mb-6">
-          {t(lang as any, "hero.headline")}
+          <span className="inline-flex items-center gap-[0.18em]">
+            {t(lang as any, "hero.headline")}
+          </span>
           <br />
-          <span className="display-secondary text-text-secondary font-normal">{t(lang as any, "hero.headlineAccent")}</span>
+          <span className="display-secondary text-magic font-normal">{t(lang as any, "hero.headlineAccent")}</span>
         </h1>
 
         <p className="text-lg text-text-secondary mb-10 leading-relaxed max-w-[560px]">

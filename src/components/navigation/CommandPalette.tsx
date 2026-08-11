@@ -37,6 +37,7 @@ export default function CommandPalette({ lang }: CommandPaletteProps) {
   const visible = commands.filter((c) => c.label.toLowerCase().includes(query.toLowerCase()));
 
   useEffect(() => {
+    const open = () => setIsOpen(true);
     const onKeyDown = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key === "k") {
         e.preventDefault();
@@ -52,7 +53,11 @@ export default function CommandPalette({ lang }: CommandPaletteProps) {
     };
 
     document.addEventListener("keydown", onKeyDown);
-    return () => document.removeEventListener("keydown", onKeyDown);
+    document.addEventListener("open-command-palette", open);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.removeEventListener("open-command-palette", open);
+    };
   }, []);
 
   useEffect(() => {

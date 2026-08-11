@@ -160,7 +160,7 @@ export default function Terminal({ lang }: TerminalProps) {
         <button
           className="w-6 h-6 flex items-center justify-center bg-transparent border-none text-text-muted text-xl cursor-pointer rounded-sm transition-colors duration-fast hover:text-text hover:bg-white/[0.06]"
           type="button"
-          aria-label="Close terminal"
+           aria-label={lang === "es" ? "Cerrar la terminal" : "Close terminal"}
           onClick={close}
         >
           &times;
@@ -187,7 +187,7 @@ export default function Terminal({ lang }: TerminalProps) {
           autoComplete="off"
           autoCapitalize="off"
           spellCheck={false}
-          aria-label="Terminal command"
+           aria-label={lang === "es" ? "Comando de terminal" : "Terminal command"}
           placeholder=""
         />
       </div>
