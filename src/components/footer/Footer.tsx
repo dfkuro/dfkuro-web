@@ -9,7 +9,7 @@ interface FooterProps {
 
 export default function Footer({ lang }: FooterProps) {
   return (
-    <footer className="site-footer py-12 pb-8 border-t border-border">
+    <footer className="site-footer py-12 pb-32 md:pb-8 border-t border-border">
       <div className="container flex items-center justify-between">
         <p className="footer-copy font-mono text-xs text-text-muted flex items-center gap-2 flex-wrap">
           <span className="footer-year cursor-default select-none">2026</span>
