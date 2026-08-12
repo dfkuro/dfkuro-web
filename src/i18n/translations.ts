@@ -267,13 +267,13 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     "experience.chapter.traxion.context":
       "One of Mexico's largest logistics operators. Thousands of trucks, hundreds of field crews, zero tolerance for downtime.",
     "experience.chapter.traxion.problem":
-      "Field crews were still using paper and radio to coordinate loads. Dispatch was reactive. Managers had no real-time visibility into fleet location or delivery status.",
+      "The tools in use struggled with technologies requiring specialized implementation, making it necessary to use tools that enabled rapid iteration on new features.",
     "experience.chapter.traxion.solution":
-      "Built a React Native ecosystem for drivers and supervisors. Designed Fastify backends that handle enterprise-scale GPS and delivery events. Established CI/CD pipelines that deploy to Ubuntu servers without human intervention.",
+      "I was part of the team modernizing tools for operators and coordinators of the Mecanix and Mi Copiloto platforms, for both Android and iOS. I implemented a resource gateway for both applications that helped maintain information consistency across them. I established CI/CD pipelines that deploy to servers without human intervention. I also contributed to developing modules for the web versions.",
     "experience.chapter.traxion.impact":
-      "Dispatch became proactive. Managers could reroute trucks in real time. Manual processes that took hours now update in seconds.",
+      "Implementing new modules alongside AI tools became more efficient, and configuring the CI/CD tools allowed these new modules to become available to users in less time.",
     "experience.chapter.traxion.tech":
-      "React Native, Fastify, PostgreSQL, Docker, GitHub Actions, Ubuntu",
+      "React Native, Fastify, PostgreSQL, Docker, GitHub Actions, Ubuntu, Claude Code, Codex, Opencode, Firebase",
     "experience.chapter.traxion.result":
       "Applications in production. Zero manual deployment. Paper eliminated.",
     "experience.chapter.freelance.date": "Feb 2016 — Present",
@@ -590,13 +590,13 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     "experience.chapter.traxion.context":
       "Uno de los operadores logísticos más grandes de México. Miles de camiones, cientos de equipos de campo, cero tolerancia a fallas.",
     "experience.chapter.traxion.problem":
-      "Los equipos de campo todavía usaban papel y radio para coordinar cargas. El despacho era reactivo. Los gerentes no tenían visibilidad en tiempo real de la ubicación de la flota ni del estado de entregas.",
+      "Las herramientas usadas tenían dificultades al trabajar con tecnologías que requerían especialización en su implementación, por lo cual era necesario usar aquellas que permitieran una rápida iteración de nuevas funcionalidades.",
     "experience.chapter.traxion.solution":
-      "Construí un ecosistema React Native para conductores y supervisores. Diseñé backends con Fastify que manejan eventos GPS y de entrega a escala empresarial. Establecí pipelines de CI/CD que despliegan a servidores Ubuntu sin intervención humana.",
+      "Fui parte del equipo de modernización de herramientas para operadores y coordinadores de la plataforma de Mecanix y Mi copiloto tanto para Android como para iOS. Implementé un gateway de recursos para ambas aplicaciones que sirvió para mantener estabilidad de información con las aplicaciones. Establecí pipelines de CI/CD que despliegan a servidores sin intervención humana. Tambien colabore en el desarrollo de modulos para las versiones web.",
     "experience.chapter.traxion.impact":
-      "El despacho se volvió proactivo. Los gerentes podían redirigir camiones en tiempo real. Procesos manuales que tomaban horas ahora se actualizan en segundos.",
+      "La implementación de nuevos módulos, en conjunto con herramientas de IA, fue más eficiente, y configurar las herramientas de CI/CD permitió que estos nuevos módulos estuvieran disponibles para los usuarios en menos tiempo.",
     "experience.chapter.traxion.tech":
-      "React Native, Fastify, PostgreSQL, Docker, GitHub Actions, Ubuntu",
+      "React Native, Fastify, PostgreSQL, Docker, GitHub Actions, Ubuntu, Claude Code, Codex, Opencode, Firebase",
     "experience.chapter.traxion.result":
       "Aplicaciones en producción. Cero despliegue manual. Papel eliminado.",
     "experience.chapter.freelance.date": "Feb 2016 — Presente",
@@ -612,7 +612,7 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     "experience.chapter.freelance.impact":
       "Cada proyecto se entregó. Algunos se convirtieron en el sistema de ingresos principal del cliente. Otros reemplazaron procesos que habían sido manuales por una década.",
     "experience.chapter.freelance.tech":
-      "React, Node.js, PostgreSQL, REST APIs, CI/CD, Arquitectura Limpia",
+      "React, Node.js, PostgreSQL, REST APIs, CI/CD, Arquitectura Limpia, Copilot",
     "experience.chapter.freelance.result":
       "Software que sigue funcionando años después sin reescrituras.",
     "experience.chapter.saeko.date": "Ago 2021 — Jun 2024",
