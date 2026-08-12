@@ -240,7 +240,7 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     "hero.subtitleLine2":
       "I write code that lives in servers to help people and business.",
     "hero.meta": "Senior Full-Stack Software Engineer",
-    "about.label": "About my",
+    "about.label": "About me",
     "about.title": "I build software that makes it to production",
     "about.bio":
       "For more than 12 years, I've been turning ideas into real products — from mobile and web applications to APIs and backend systems.\nMy work has shipped to app stores, supported logistics operations, and been used on offshore oil platforms.\nI care about more than making things work today. I build systems that can evolve, APIs that teams can rely on, and code that makes sense to the engineer who has to maintain it tomorrow.",
